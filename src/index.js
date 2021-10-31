@@ -1,21 +1,24 @@
-import * as React from 'react'
+import { useCallback, useRef } from "react";
 
-export const useMyHook = () => {
-  let [{
-    counter
-  }, setState] = React.useState({
-    counter: 0
-  })
+export const useSyncedScrolling = () => {
+  const refs = useRef();
 
-  React.useEffect(() => {
-    let interval = window.setInterval(() => {
-      counter++
-      setState({counter})
-    }, 1000)
-    return () => {
-      window.clearInterval(interval)
+  refs.current = [];
+
+  const onScroll = useCallback((e) => {
+    const target = e.target;
+    const { scrollTop, scrollLeft } = target;
+
+    for (let el of refs.current) {
+      if (el !== target) {
+        el.scrollTop = scrollTop;
+        el.scrollLeft = scrollLeft;
+      }
     }
-  }, [])
+  }, []);
 
-  return counter
-}
+  return {
+    onScroll,
+    ref: (ref) => ref && refs.current.push(ref),
+  };
+};
