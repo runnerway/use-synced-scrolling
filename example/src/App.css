@@ -1,0 +1,7 @@
+.container {
+  display: flex;
+}
+.scrollable {
+  height: 100px;
+  overflow: scroll;
+}

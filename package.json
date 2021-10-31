@@ -1,7 +1,7 @@
 {
   "name": "use-synced-scrolling",
   "version": "1.0.0",
-  "description": "React hook for synced element scrolling",
+  "description": "React hook to sync element scrolling",
   "author": "runnerway",
   "license": "MIT",
   "repository": "runnerway/use-synced-scrolling",
