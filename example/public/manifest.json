@@ -1,0 +1,8 @@
+{
+  "short_name": "use-synced-scrolling",
+  "name": "use-synced-scrolling",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
