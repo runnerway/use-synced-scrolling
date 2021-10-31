@@ -5,14 +5,21 @@ export const useSyncedScrolling = () => {
 
   refs.current = [];
 
+  let lastScrollTop, lastScrollLeft;
+
   const onScroll = useCallback((e) => {
     const target = e.target;
     const { scrollTop, scrollLeft } = target;
 
-    for (let el of refs.current) {
-      if (el !== target) {
-        el.scrollTop = scrollTop;
-        el.scrollLeft = scrollLeft;
+    if (lastScrollTop != scrollTop || lastScrollLeft != scrollLeft) {
+      lastScrollTop = scrollTop;
+      lastScrollLeft = scrollLeft;
+
+      for (let el of refs.current) {
+        if (el !== target) {
+          el.scrollTop = scrollTop;
+          el.scrollLeft = scrollLeft;
+        }
       }
     }
   }, []);
