@@ -2,26 +2,26 @@
 
 > React hook for synced element scrolling
 
-[![NPM](https://img.shields.io/npm/v/use-synced-scrolling.svg)](https://www.npmjs.com/package/use-synced-scrolling) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-## Install
-
-```bash
-npm install --save use-synced-scrolling
-```
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from "react";
+import { useSyncedScrolling } from "use-synced-scrolling";
 
-import { useMyHook } from 'use-synced-scrolling'
-
-const Example = () => {
-  const example = useMyHook()
+function Example() {
   return (
-    <div>{example}</div>
-  )
+    <div className="...">
+      <div className="..." {...syncedScrolling}>
+        ...
+      </div>
+      <div className="..." {...syncedScrolling}>
+        ...
+      </div>
+      )}
+    </div>
+  );
 }
 ```
 
