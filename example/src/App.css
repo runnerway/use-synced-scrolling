@@ -1,15 +1,15 @@
-.container {
+main {
   display: flex;
+  margin-bottom: 20px;
 }
-.scrollable {
+main > div {
   border: 1px solid;
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   margin-right: 10px;
   overflow: scroll;
 }
-.text {
-  border: 1px solid;
-  width: 300px;
+main > div > div {
+  width: 200px;
   overflow: scroll;
 }
