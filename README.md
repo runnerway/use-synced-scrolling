@@ -4,23 +4,27 @@
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## Features
+
+- Small size and no dependencies
+- Support for dynamic component
+
 ## Usage
 
 ```jsx
-import React from "react";
 import { useSyncedScrolling } from "use-synced-scrolling";
 
 function Example() {
+  const syncedScrolling = useSyncedScrolling();
   return (
-    <div className="...">
-      <div className="..." {...syncedScrolling}>
-        ...
+    <main>
+      <div {...syncedScrolling}>
+        <div>{text}</div>
       </div>
-      <div className="..." {...syncedScrolling}>
-        ...
+      <div {...syncedScrolling}>
+        <div>{text}</div>
       </div>
-      )}
-    </div>
+    </main>
   );
 }
 ```
