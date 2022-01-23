@@ -1,4 +1,4 @@
-import { useCallback, useRef } from "react";
+import { useCallback, useRef } from 'react';
 
 export const useSyncedScrolling = () => {
   const refs = useRef();
@@ -26,6 +26,6 @@ export const useSyncedScrolling = () => {
 
   return {
     onScroll,
-    ref: (ref) => ref && refs.current.push(ref),
+    ref: (ref) => ref && refs.current.push(ref)
   };
 };
