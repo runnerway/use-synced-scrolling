@@ -1,10 +1,10 @@
 {
-  "name": "use-synced-scrolling",
+  "name": "@runnerway/use-synced-scrolling",
   "version": "1.0.0",
   "description": "React hook to sync element scrolling",
   "author": "runnerway",
   "license": "MIT",
-  "repository": "runnerway/use-synced-scrolling",
+  "repository": "git://github.com/runnerway/use-synced-scrolling.git",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
@@ -62,5 +62,8 @@
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-url": "^2.1.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
